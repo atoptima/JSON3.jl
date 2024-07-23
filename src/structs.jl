@@ -550,7 +550,7 @@ mutable struct StructClosure{T, KW}
     kw::KW
 end
 
-const DEFAULT_STRUCT_FIELD_COUNT = 32
+const DEFAULT_STRUCT_FIELD_COUNT = 64
 
 @inline function (f::StructClosure)(i, nm, TT; kw...)
     kw2 = merge(values(kw), f.kw)
